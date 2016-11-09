@@ -33,5 +33,6 @@ build
 # Eclipse
 .cproject
 .settings
+.project
 
 .output
