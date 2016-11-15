@@ -6,8 +6,8 @@
 #include "driver/gpio.h"
 #include "adxl345.h"
 
-#define SCL_PIN GPIO_NUM_5
-#define SDA_PIN GPIO_NUM_4
+#define SCL_PIN GPIO_NUM_17
+#define SDA_PIN GPIO_NUM_16
 static const char *TAG = "sensor";
 
 static void sensorTask(void *pvParameters) {
@@ -27,7 +27,6 @@ static void sensorTask(void *pvParameters) {
 
 void app_main() {
 	ESP_ERROR_CHECK(nvs_flash_init());
-	system_init();
 	ESP_LOGI("system","system inited");
 
 	xTaskCreate(&sensorTask,	//pvTaskCode
